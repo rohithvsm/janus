@@ -19,8 +19,10 @@ endif
 ""
 
 set nowrap                        " don't wrap lines
-set tabstop=2                     " a tab is two spaces
-set shiftwidth=2                  " an autoindent (with <<) is two spaces
+" rohithvsm: commented after migrating from janus to plug.vim.
+"set tabstop=2                     " a tab is two spaces
+" rohithvsm: commented after migrating from janus to plug.vim.
+"set shiftwidth=2                  " an autoindent (with <<) is two spaces
 set expandtab                     " use spaces, not tabs
 set list                          " Show invisible characters
 set backspace=indent,eol,start    " backspace through everything in insert mode
@@ -55,7 +57,11 @@ set smartcase   " ... unless they contain at least one capital letter
 " set wildmode=list:longest,list:full
 
 " Disable output and VCS files
-set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
+" rohithvsm: removed *.out from wildignore. Go to
+" http://vimdoc.sourceforge.net/htmldoc/todo.html and find E479 for an
+" explanation. If you can't find it, its probably fixed.
+"set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
+set wildignore+=*.o,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
 
 " Disable archive files
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
